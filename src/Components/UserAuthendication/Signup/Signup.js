@@ -1,0 +1,183 @@
+import React, { useState } from "react";
+import axios from "axios"; // Don't forget to import axios!
+
+const Signup = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [batch, setBatch] = useState("");
+  const [phone, setPhone] = useState("");
+  const [qualification, setQualification] = useState("");
+  const [experience, setExperience] = useState("");
+  const [passing, setPassing] = useState("");
+  const [noticePeriod, setNoticePeriod] = useState("");
+  const [github, setGithub] = useState("");
+  const [portfolio, setPortfolio] = useState("");
+  const [resume, setResume] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const newUser = {
+      name,
+      email,
+      password,
+      batch,
+      phone,
+      qualification,
+      experience,
+      passing,
+      noticePeriod,
+      github,
+      portfolio,
+      resume,
+    };
+
+    try {
+      const response = await axios.post(
+        "https://zen-student-dashboard-backend.onrender.com/api/student/StudentDetails",
+        newUser
+      );
+      console.log(response.data);
+      window.location.href = "/";
+    } catch (error) {
+      console.log(error.response.data.message);
+    }
+  };
+
+  return (
+    <div className="loginPage">
+      <div className="loginForm">
+        <h4 className="text-center">Signup</h4>
+        <form onSubmit={handleSubmit}>
+          <div class="row g-3">
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="phone"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+              />
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="batch"
+                value={batch}
+                onChange={(e) => setBatch(e.target.value)}
+              />
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="qualification"
+                value={qualification}
+                onChange={(e) =>setQualification(e.target.value)}
+              />
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="experience"
+                value={experience}
+                onChange={(e) => setExperience(e.target.value)}
+              />
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="passing"
+                value={passing}
+                onChange={(e) => setPassing(e.target.value)}
+              />
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="noticePeriod"
+                value={noticePeriod}
+                onChange={(e) => setNoticePeriod(e.target.value)}
+              />
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="github"
+                value={github}
+                onChange={(e) => setGithub(e.target.value)}
+              />
+            </div>
+          </div>
+          <div class="row g-3">
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="portfolio"
+                value={portfolio}
+                onChange={(e) => setPortfolio(e.target.value)}
+              />
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="resume"
+                value={resume}
+                onChange={(e) => setResume(e.target.value)}
+              />
+            </div>
+          </div>
+
+          <button type="submit" className="btn btn-success w-100 rounded-0">
+            Signup
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default Signup;

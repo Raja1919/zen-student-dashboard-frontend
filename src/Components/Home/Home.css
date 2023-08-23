@@ -1,0 +1,94 @@
+/* Dashboard.css */
+
+.container-fluid {
+  padding: 0px;
+}
+
+.row.flex-nowrap {
+  margin: 0;
+}
+
+.sidebar {
+  width: 170px;
+  background-color: white;
+  color: #ffffff;
+  overflow-y: scroll;
+  border: 1px solid gray;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 10px;
+}
+
+.sidebar a {
+  color: #555a8f;
+  text-decoration: none;
+}
+
+.sidebar ul.nav-pills {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li.nav-item {
+  margin: 10px 0;
+}
+
+.col.p-0 {
+  background-color: #f8f9fa;
+}
+
+.d-flex.justify-content-center {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e9ecef;
+  padding: 10px;
+}
+
+button {
+  margin-top: 10px;
+  height: 40px;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #495057;
+}
+
+.fs-4 {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.sidebar-logo-image{
+  width: 60px;
+}
+
+
+.dropdown-toggle::after {
+  content: none;
+}
+
+@media (max-width: 799px) {
+  .sidebar {
+    width: 100px;
+  }
+}

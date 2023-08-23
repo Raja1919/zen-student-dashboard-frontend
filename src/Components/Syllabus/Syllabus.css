@@ -1,0 +1,36 @@
+/* Syllabus.css */
+
+.container {
+    max-width: 300px;
+    margin: 50px auto 0; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+  }
+  
+  .container h5 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .container hr {
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+  }
+  
+  .container h6 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #888;
+  }
+  
+  .container a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .container a:hover {
+    text-decoration: underline;
+  }
+  

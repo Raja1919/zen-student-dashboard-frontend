@@ -1,0 +1,96 @@
+/* Add these styles to your Login.css file */
+
+.loginPage {
+    background: url("https://www.pixel4k.com/wp-content/uploads/2018/12/abstract-cube-lines-geometric-4k_1546277892.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .loginForm {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .loginForm h2 {
+    margin-bottom: 20px;
+  }
+  
+  .loginForm form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .loginForm label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .loginForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .loginForm button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .loginForm .btn-success {
+    background-color: #28a745;
+  }
+  
+  .loginForm .btn-success:hover {
+    background-color: #218838;
+  }
+  
+  .loginForm .btn-default {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    color: #333;
+  }
+  
+  .loginForm .btn-default:hover {
+    background-color: #e2e6ea;
+  }
+  
+ @media (max-width: 700px) {
+  .loginPage {
+    justify-content: flex-start; /* Align content to the top */
+    padding-top: 20px; /* Add some space at the top */
+  }
+
+  .loginForm {
+    width: 60%;
+    margin: auto; /* Center the form horizontally */
+  }
+}
+
+/* Add this style for error messages */
+.error-message {
+  color: red;
+  margin-top: 5px; /* Add some space above the error message */
+}
+
+
+/* Adjust layout for screens smaller than 500px */
+@media (max-width: 500px) {
+  .loginForm input,
+  .loginForm button {
+    padding: 8px; /* Decrease padding for smaller inputs/buttons */
+  }
+}
