@@ -34,7 +34,7 @@ const Task = () => {
             </p>
           </div>
           <div className="rightside">
-            <p>submitted on {new Date(task.submittedOn).toLocaleDateString()}</p>
+            <p>submitted on {task.submittedOn}</p>
             <div className="d-flex flex-row align-items-center justify-content-end">
               <p className="mark">{task.mark}</p>
               <p className="task">Task</p>
