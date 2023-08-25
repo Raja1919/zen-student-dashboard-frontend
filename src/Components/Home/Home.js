@@ -17,7 +17,6 @@ const Home = () => {
     navigate("/");
   };
 
-  const name = localStorage.getItem("userName");
 
   return (
     <div className="container-fluid">
@@ -159,7 +158,7 @@ const Home = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                {name}
+                Profile
               </button>
               <div
                 className="dropdown-menu"
@@ -170,7 +169,7 @@ const Home = () => {
                   className="dropdown-item"
                   onClick={() => handleSidebarItemClick("Profile")}
                 >
-                  Profile
+                  Student details
                 </Link>
                 <button className="dropdown-item" onClick={handleLogout}>
                   Logout
