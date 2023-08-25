@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Task.css";
+import TaskModal from "./TaskModal"; 
 
 const Task = () => {
   const [tasks, setTasks] = useState([]);
+  const [selectedTask, setSelectedTask] = useState(null);
   const username = localStorage.getItem("userName");
 
   const fetchTasks = async () => {
@@ -23,12 +25,20 @@ const Task = () => {
     fetchTasks();
   }, []);
 
+  const openModal = (task) => {
+    setSelectedTask(task);
+  };
+
+  const closeModal = () => {
+    setSelectedTask(null);
+  };
+
   return (
     <div className="Task">
       {tasks.map((task) => (
-        <div key={task._id} className="task-item">
+        <div key={task._id} className="task-item" onClick={() => openModal(task)}>
           <div className="leftside">
-            <h2> {username}</h2>
+            <h2>{username}</h2>
             <p>
               {task.day} {task.title}
             </p>
@@ -42,6 +52,7 @@ const Task = () => {
           </div>
         </div>
       ))}
+      <TaskModal selectedTask={selectedTask} closeModal={closeModal} />
     </div>
   );
 };

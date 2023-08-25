@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import WebcodeModal from './WebcodeModal';
 
 const Webcode = () => {
   const [tasks, setTasks] = useState([]);
+  const [selectedTask, setSelectedTask] = useState(null);
   const name = localStorage.getItem('userName');
 
   useEffect(() => {
@@ -22,10 +24,18 @@ const Webcode = () => {
     }
   };
 
+  const openModal = (task) => {
+    setSelectedTask(task);
+  };
+
+  const closeModal = () => {
+    setSelectedTask(null);
+  };
+
   return (
     <div className="Task">
       {tasks.map((task) => (
-        <div key={task._id} className="task-item">
+        <div key={task._id} className="task-item" onClick={() => openModal(task)}>
           <div className="leftside">
             <h2> {name}</h2>
             <p>
@@ -41,6 +51,7 @@ const Webcode = () => {
           </div>
         </div>
       ))}
+       <WebcodeModal selectedTask={selectedTask} closeModal={closeModal} />
     </div>
   );
 };
