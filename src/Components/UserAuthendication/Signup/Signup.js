@@ -1,19 +1,12 @@
 import React, { useState } from "react";
-import axios from "axios"; // Don't forget to import axios!
+import axios from "axios"; 
 
 const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [batch, setBatch] = useState("");
   const [phone, setPhone] = useState("");
-  const [qualification, setQualification] = useState("");
-  const [experience, setExperience] = useState("");
-  const [passing, setPassing] = useState("");
-  const [noticePeriod, setNoticePeriod] = useState("");
-  const [github, setGithub] = useState("");
-  const [portfolio, setPortfolio] = useState("");
-  const [resume, setResume] = useState("");
+ 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,15 +15,7 @@ const Signup = () => {
       name,
       email,
       password,
-      batch,
       phone,
-      qualification,
-      experience,
-      passing,
-      noticePeriod,
-      github,
-      portfolio,
-      resume,
     };
 
     try {
@@ -87,86 +72,6 @@ const Signup = () => {
                 placeholder="phone"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-              />
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="col">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="batch"
-                value={batch}
-                onChange={(e) => setBatch(e.target.value)}
-              />
-            </div>
-            <div class="col">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="qualification"
-                value={qualification}
-                onChange={(e) =>setQualification(e.target.value)}
-              />
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="col">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="experience"
-                value={experience}
-                onChange={(e) => setExperience(e.target.value)}
-              />
-            </div>
-            <div class="col">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="passing"
-                value={passing}
-                onChange={(e) => setPassing(e.target.value)}
-              />
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="col">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="noticePeriod"
-                value={noticePeriod}
-                onChange={(e) => setNoticePeriod(e.target.value)}
-              />
-            </div>
-            <div class="col">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="github"
-                value={github}
-                onChange={(e) => setGithub(e.target.value)}
-              />
-            </div>
-          </div>
-          <div class="row g-3">
-            <div class="col">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="portfolio"
-                value={portfolio}
-                onChange={(e) => setPortfolio(e.target.value)}
-              />
-            </div>
-            <div class="col">
-              <input
-                type="text"
-                class="form-control"
-                placeholder="resume"
-                value={resume}
-                onChange={(e) => setResume(e.target.value)}
               />
             </div>
           </div>
