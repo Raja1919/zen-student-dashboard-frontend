@@ -56,7 +56,7 @@ const Home = () => {
                   className="nav-link px-0 align-middle"
                   onClick={() => handleSidebarItemClick("dashboard")}
                 >
-                  <i className="fs-4 bi-people"></i>
+                  <i className="fs-4 bi bi-grid-fill"></i>
                   <span className="ms-1 d-none d-sm-inline">Dashboard</span>
                 </Link>
               </li>
@@ -77,7 +77,7 @@ const Home = () => {
                   className="nav-link px-0 align-middle"
                   onClick={() => handleSidebarItemClick("Webcode")}
                 >
-                  <i className="fs-4 bi-people"></i>
+                  <i className="fs-4 bi bi-speedometer"></i>
                   <span className="ms-1 d-none d-sm-inline">Webcode</span>
                 </Link>
               </li>
@@ -87,7 +87,7 @@ const Home = () => {
                   className="nav-link px-0 align-middle"
                   onClick={() => handleSidebarItemClick("Capstone")}
                 >
-                  <i className="fs-4 bi-people"></i>
+                  <i className="fs-4 bi bi-kanban"></i>
                   <span className="ms-1 d-none d-sm-inline">Capstone</span>
                 </Link>
               </li>
@@ -98,7 +98,7 @@ const Home = () => {
                   className="nav-link px-0 align-middle"
                   onClick={() => handleSidebarItemClick("Application")}
                 >
-                  <i className="fs-4 bi-people"></i>
+                  <i className="fs-4 bi bi-ui-checks"></i>
                   <span className="ms-1 d-none d-sm-inline">Application</span>
                 </Link>
               </li>
@@ -108,7 +108,7 @@ const Home = () => {
                   className="nav-link px-0 align-middle"
                   onClick={() => handleSidebarItemClick("Certificate")}
                 >
-                  <i className="fs-4 bi-people"></i>
+                  <i className="fs-4 bi bi-graph-up-arrow"></i>
                   <span className="ms-1 d-none d-sm-inline">Certificate</span>
                 </Link>
               </li>
@@ -118,7 +118,7 @@ const Home = () => {
                   className="nav-link px-0 align-middle"
                   onClick={() => handleSidebarItemClick("InterviewTask")}
                 >
-                  <i className="fs-4 bi-people"></i>
+                  <i className="fs-4 bi bi-building-dash"></i>
                   <span className="ms-1 d-none d-sm-inline">InterviewTask</span>
                 </Link>
               </li>
@@ -128,7 +128,7 @@ const Home = () => {
                   className="nav-link px-0 align-middle"
                   onClick={() => handleSidebarItemClick("Syllabus")}
                 >
-                  <i className="fs-4 bi-people"></i>
+                  <i className="fs-4 bi bi-book"></i>
                   <span className="ms-1 d-none d-sm-inline">Syllabus</span>
                 </Link>
               </li>
@@ -138,7 +138,7 @@ const Home = () => {
                   className="nav-link px-0 align-middle"
                   onClick={() => handleSidebarItemClick("Leaderboard")}
                 >
-                  <i className="fs-4 bi-people"></i>
+                  <i className="fs-4 bi bi-award-fill"></i>
                   <span className="ms-1 d-none d-sm-inline">Leaderboard</span>
                 </Link>
               </li>
