@@ -15,7 +15,7 @@ const Profile = () => {
       const userId = localStorage.getItem("userId");
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `https://zen-student-dashboard-backend.onrender.com/api/student/getStudent/${userId}`,
+        `https://zen-student-dashboard-backend.onrender.com/api/profile/getStudent/${userId}`,
         {
           headers: {
             "x-auth-token": token,
@@ -39,7 +39,7 @@ const Profile = () => {
       const userId = localStorage.getItem("userId");
       const token = localStorage.getItem("token");
       await axios.put(
-        `https://zen-student-dashboard-backend.onrender.com/api/student/updateStudent/${userId}`,
+        `https://zen-student-dashboard-backend.onrender.com/api/profile/updateStudent/${userId}`,
         editedUserData,
         {
           headers: {
