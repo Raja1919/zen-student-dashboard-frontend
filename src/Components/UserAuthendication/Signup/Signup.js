@@ -20,7 +20,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "https://zen-student-dashboard-backend.onrender.com/api/student/StudentDetails",
+        "https://zen-student-dashboard-backend.onrender.com/api/student/register",
         newUser
       );
       console.log(response.data);
